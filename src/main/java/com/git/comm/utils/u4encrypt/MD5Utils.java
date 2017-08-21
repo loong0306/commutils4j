@@ -3,9 +3,6 @@ package com.git.comm.utils.u4encrypt;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- * Created by dragon on 4/1/2017.
- */
 public class MD5Utils {
     /**
      *

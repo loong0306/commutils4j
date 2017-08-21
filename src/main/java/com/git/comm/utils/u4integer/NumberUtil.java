@@ -1,8 +1,5 @@
 package com.git.comm.utils.u4integer;
 
-/**
- * Created by dragon on 4/1/2017.
- */
 public class NumberUtil {
     public String getChinaNumber(int i){
         String number1 = "零一二三四五六七八九";

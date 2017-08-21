@@ -1,8 +1,7 @@
 package com.git.comm.utils.u4string;
 
-/**
- * Created by dragon on 8/20/2017.
- */
+import java.util.UUID;
+
 public class StringUtils {
 
     /**
@@ -12,5 +11,36 @@ public class StringUtils {
      */
     public boolean isSNullOrEmpty(String str) {
         return str == null || "".equals(str.trim());
+    }
+
+    /**
+     * 判断字符串组是否为空
+     * @param strs
+     * @return
+     */
+    public boolean isStrsEmptyOrNull(String... strs) {
+        if(strs != null && strs.length != 0) {
+            String[] arr$ = strs;
+            int len$ = strs.length;
+            for(int i$ = 0; i$ < len$; ++i$) {
+                String str = arr$[i$];
+                if(str == null || str.trim().equals("")) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /**
+     * 随机获取32位UUID字符串(无中划线)
+     *
+     * @return UUID字符串
+     */
+    public String getUUID() {
+        String uuid = UUID.randomUUID().toString();
+        return uuid.substring(0, 8) + uuid.substring(9, 13) + uuid.substring(14, 18) + uuid.substring(19, 23) + uuid.substring(24);
     }
 }

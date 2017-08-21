@@ -1,12 +1,8 @@
 package com.git.comm.utils.u4string;
 
 /**
- * Created by dragon on 4/1/2017.
- */
-/**
  * Double类型金额 转换 大写中文
  *
- * @date 2017年2月23日 10:10:07
  * @see "调用方法getTurnMoneys"({@String})
  */
 public class ChinaUpperCaseUtil {
