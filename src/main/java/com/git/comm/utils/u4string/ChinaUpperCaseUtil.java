@@ -6,9 +6,10 @@ package com.git.comm.utils.u4string;
  * @see "调用方法getTurnMoneys"({@String})
  */
 public class ChinaUpperCaseUtil {
-    static String moneyD = new String();
-    static String moneyBefore = new String();
-    static String moneyAfter = new String();
+
+    private static String moneyD = new String();
+    private static String moneyBefore = new String();
+    private static String moneyAfter = new String();
 
 
     public static String getTurns(int i) {
