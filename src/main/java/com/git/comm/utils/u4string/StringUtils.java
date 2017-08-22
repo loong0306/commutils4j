@@ -9,7 +9,7 @@ public class StringUtils {
      * @param str
      * @return
      */
-    public boolean isSNullOrEmpty(String str) {
+    public static boolean isSNullOrEmpty(String str) {
         return str == null || "".equals(str.trim());
     }
 
@@ -18,7 +18,7 @@ public class StringUtils {
      * @param strs
      * @return
      */
-    public boolean isStrsEmptyOrNull(String... strs) {
+    public static boolean isStrsEmptyOrNull(String... strs) {
         if(strs != null && strs.length != 0) {
             String[] arr$ = strs;
             int len$ = strs.length;
@@ -39,7 +39,7 @@ public class StringUtils {
      *
      * @return UUID字符串
      */
-    public String getUUID() {
+    public static String getUUID() {
         String uuid = UUID.randomUUID().toString();
         return uuid.substring(0, 8) + uuid.substring(9, 13) + uuid.substring(14, 18) + uuid.substring(19, 23) + uuid.substring(24);
     }

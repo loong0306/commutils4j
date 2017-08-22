@@ -11,7 +11,7 @@ public class DatetimeUtils {
      * 获取当前精确时间 yyyy-MM-dd HH:mm:ss
      * @return
      */
-    public String getNowTimeYMDHMS(){
+    public static String getNowTimeYMDHMS(){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return sdf.format(new Date());
     }
@@ -20,7 +20,7 @@ public class DatetimeUtils {
      * 获取当前日期 yyyy-MM-dd
      * @return
      */
-    public String getNowTimeYMD(){
+    public static String getNowTimeYMD(){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         return sdf.format(new Date());
     }
@@ -29,7 +29,7 @@ public class DatetimeUtils {
      * 获取当前日期 HH:mm:ss
      * @return
      */
-    public String getNowTimeHMS(){
+    public static String getNowTimeHMS(){
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         return sdf.format(new Date());
     }

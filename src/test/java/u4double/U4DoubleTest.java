@@ -1,6 +1,6 @@
 package u4double;
 
-import com.git.comm.utils.u4double.DoubleUtil;
+import com.git.comm.utils.u4double.DoubleUtils;
 import org.junit.Test;
 
 /**
@@ -8,10 +8,10 @@ import org.junit.Test;
  */
 public class U4DoubleTest {
 
-    DoubleUtil doubleUtil = new DoubleUtil();
+    DoubleUtils doubleUtils = new DoubleUtils();
 
     @Test
     public void test(){
-        System.out.println(doubleUtil.formatNumber(3.1415926));
+        System.out.println(doubleUtils.formatNumber(3.1415926));
     }
 }

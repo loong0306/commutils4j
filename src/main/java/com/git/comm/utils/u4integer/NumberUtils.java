@@ -1,7 +1,7 @@
 package com.git.comm.utils.u4integer;
 
-public class NumberUtil {
-    public String getChinaNumber(int i){
+public class NumberUtils {
+    public static String getChinaNumber(int i){
         String number1 = "零一二三四五六七八九";
         String result = "";
         if(i < 10){
