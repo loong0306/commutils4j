@@ -24,7 +24,7 @@ public class U4jsonTest {
         Wrapper<List<String>> wrapString = WrapMapper.wrap(Wrapper.SUCCESS_CODE, Wrapper.SUCCESS_MESSAGE, stringList);
         System.out.println("wrapString = " + wrapString.getResult());
 
-        // Object - person
+        // Object - Person
         Person person = new Person();
         person.setName("dragon");
         person.setAge("22");
@@ -32,7 +32,7 @@ public class U4jsonTest {
         Wrapper<Person> wrapPerson = WrapMapper.wrap(Wrapper.SUCCESS_CODE, Wrapper.SUCCESS_MESSAGE, person);
         System.out.println("wrapPerson = " + wrapPerson.getResult());
 
-        // Object - person - List
+        // Object - Person - List
         List<Person> personList = new ArrayList<Person>();
         Person person1 = new Person();
         person1.setName("dragon");
