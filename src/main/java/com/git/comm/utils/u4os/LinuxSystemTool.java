@@ -1,4 +1,4 @@
-package com.git.comm.utils.u4OS;
+package com.git.comm.utils.u4os;
 
 import java.io.*;
 import java.util.StringTokenizer;

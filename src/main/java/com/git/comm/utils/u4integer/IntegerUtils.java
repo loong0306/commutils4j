@@ -1,6 +1,6 @@
 package com.git.comm.utils.u4integer;
 
-public class NumberUtils {
+public class IntegerUtils {
     public static String getChinaNumber(int i){
         String number1 = "零一二三四五六七八九";
         String result = "";
