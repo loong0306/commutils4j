@@ -9,6 +9,15 @@ public class StringUtils {
      * @param str
      * @return
      */
+    public static boolean isEmpty(String str) {
+        return str == null || str.length() == 0;
+    }
+
+    /**
+     * 判断字符串是否为空
+     * @param str
+     * @return
+     */
     public static boolean isSNullOrEmpty(String str) {
         return str == null || "".equals(str.trim());
     }

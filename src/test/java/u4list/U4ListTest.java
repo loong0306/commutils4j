@@ -11,14 +11,12 @@ import java.util.List;
  */
 public class U4ListTest {
 
-    ListUtils listUtils = new ListUtils();
-
     @Test
     public void test(){
         // 判断集合是否为空
         List<String> stringList = new ArrayList<String>();
-        System.out.println(listUtils.isEmpty(stringList));
+        System.out.println(ListUtils.isEmpty(stringList));
         stringList.add("has");
-        System.out.println(listUtils.isEmpty(stringList));
+        System.out.println(ListUtils.isEmpty(stringList));
     }
 }

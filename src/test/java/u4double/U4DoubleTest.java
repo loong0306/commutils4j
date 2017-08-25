@@ -8,10 +8,8 @@ import org.junit.Test;
  */
 public class U4DoubleTest {
 
-    DoubleUtils doubleUtils = new DoubleUtils();
-
     @Test
     public void test(){
-        System.out.println(doubleUtils.formatNumber(3.1415926));
+        System.out.println(DoubleUtils.formatNumber(3.1415926));
     }
 }
