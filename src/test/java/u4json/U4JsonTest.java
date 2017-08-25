@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by dragon on 8/23/2017.
  */
-public class U4jsonTest {
+public class U4JsonTest {
 
     @Test
     public void test(){

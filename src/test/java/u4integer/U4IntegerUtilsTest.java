@@ -8,10 +8,8 @@ import org.junit.Test;
  */
 public class U4IntegerUtilsTest {
 
-    IntegerUtils integerUtils = new IntegerUtils();
-
     @Test
     public void test(){
-        System.out.println(integerUtils.getChinaNumber(6));
+        System.out.println(IntegerUtils.getChinaNumber(6));
     }
 }
