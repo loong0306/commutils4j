@@ -1,6 +1,8 @@
 package com.git.comm.utils.u4integer;
 
 public class IntegerUtils {
+
+    // 数字转换汉字
     public static String getChinaNumber(int i){
         String number1 = "零一二三四五六七八九";
         String result = "";
