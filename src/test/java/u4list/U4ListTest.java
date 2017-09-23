@@ -18,5 +18,12 @@ public class U4ListTest {
         System.out.println(ListUtils.isEmpty(stringList));
         stringList.add("has");
         System.out.println(ListUtils.isEmpty(stringList));
+
+        // 拆分list，按500条拆分
+        List<String> strings =  new ArrayList<String>();
+        for (int i = 0; i < 1000; i++){
+            strings.add(String.valueOf(i));
+        }
+        System.out.println(ListUtils.splitList(strings));
     }
 }
