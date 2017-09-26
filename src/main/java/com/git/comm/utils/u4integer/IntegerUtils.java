@@ -13,4 +13,13 @@ public class IntegerUtils {
         }
         return result;
     }
+
+    // String 类型转换 Integer
+    public static int parseInt(String str) {
+        try {
+            return Integer.parseInt(str);
+        } catch (Exception e) {
+            return 0;
+        }
+    }
 }

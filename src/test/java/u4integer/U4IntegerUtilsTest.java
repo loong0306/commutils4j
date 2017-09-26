@@ -11,5 +11,7 @@ public class U4IntegerUtilsTest {
     @Test
     public void test(){
         System.out.println(IntegerUtils.getChinaNumber(6));
+        System.out.println(IntegerUtils.parseInt("987"));
+        System.out.println(IntegerUtils.parseInt("noInt"));
     }
 }
