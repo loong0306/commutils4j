@@ -21,5 +21,9 @@ public class U4StringTest {
         System.out.println(StringUtils.isStrsEmptyOrNull("first",""));
         // getUUID
         System.out.println(StringUtils.getUUID());
+        // utf8Encode
+        System.out.println(StringUtils.utf8Encode("utf8"));
+        // getHrefInnerHtml
+        System.out.println(StringUtils.getHrefInnerHtml("http://github.com"));
     }
 }

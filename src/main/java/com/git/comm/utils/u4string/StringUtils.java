@@ -1,6 +1,11 @@
 package com.git.comm.utils.u4string;
 
+import com.sun.deploy.net.URLEncoder;
+
+import java.io.UnsupportedEncodingException;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringUtils {
 
@@ -51,5 +56,40 @@ public class StringUtils {
     public static String getUUID() {
         String uuid = UUID.randomUUID().toString();
         return uuid.substring(0, 8) + uuid.substring(9, 13) + uuid.substring(14, 18) + uuid.substring(19, 23) + uuid.substring(24);
+    }
+
+    /**
+     * 返回一个utf8的字符串
+     * @param str
+     * @return str
+     */
+    public static String utf8Encode(String str) {
+        if (!isEmpty(str) && str.getBytes().length != str.length()) {
+            try {
+                return URLEncoder.encode(str, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException("UnsupportedEncodingException occurred.", e);
+            }
+        }
+        return str;
+    }
+
+    /**
+     * 返回一个html
+     * @param href
+     * @return href
+     */
+    public static String getHrefInnerHtml(String href) {
+        if (isEmpty(href)) {
+            return "";
+        }
+        String hrefReg = ".*<[\\s]*a[\\s]*.*>(.+?)<[\\s]*/a[\\s]*>.*";
+        Pattern hrefPattern = Pattern.compile(hrefReg,
+                Pattern.CASE_INSENSITIVE);
+        Matcher hrefMatcher = hrefPattern.matcher(href);
+        if (hrefMatcher.matches()) {
+            return hrefMatcher.group(1);
+        }
+        return href;
     }
 }
