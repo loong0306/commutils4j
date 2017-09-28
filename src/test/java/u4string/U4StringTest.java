@@ -25,5 +25,7 @@ public class U4StringTest {
         System.out.println(StringUtils.utf8Encode("utf8"));
         // getHrefInnerHtml
         System.out.println(StringUtils.getHrefInnerHtml("http://github.com"));
+        // trimString
+        System.out.println(StringUtils.trimString("This is a test string.", 12));
     }
 }

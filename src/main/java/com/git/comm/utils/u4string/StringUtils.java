@@ -92,4 +92,20 @@ public class StringUtils {
         }
         return href;
     }
+
+    /**
+     * 如果字符串没有超过最长显示长度返回原字符串，否则从开头截取指定长度并加...返回。
+     * @param str
+     * @param length
+     * @return str
+     */
+    public static String trimString(String str, int length) {
+        if (str == null) {
+            return "";
+        } else if (str.length() > length) {
+            return str.substring(0, length - 3) + "...";
+        } else {
+            return str;
+        }
+    }
 }
