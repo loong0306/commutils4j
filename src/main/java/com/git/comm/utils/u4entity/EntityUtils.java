@@ -11,7 +11,6 @@ public class EntityUtils {
      * @return
      */
     public static Object dtoToEntity(Object dto, Object entity){
-        Object obj = new Object();
         ModelMapper modelMapper = new ModelMapper();
         return modelMapper.map(dto, entity.getClass());
     }

@@ -16,6 +16,6 @@ public class U4EntityTest {
         dto.setSex("man");
         dto.setPhone("133333");
         dto.setEmail("123@123.123");
-        System.out.println(EntityUtils.dtoToEntity(dto, Person.class).toString());
+        System.out.println(EntityUtils.dtoToEntity(dto, new Person()).toString());
     }
 }
