@@ -12,6 +12,7 @@ public class U4Md5Test {
 
     @Test
     public void test(){
+        // 32位密文
         String md5Str = md5Utils.encryption("this is pwd");
         System.out.println(md5Str);
     }

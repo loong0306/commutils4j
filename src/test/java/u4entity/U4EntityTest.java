@@ -10,6 +10,7 @@ public class U4EntityTest {
 
     @Test
     public void test(){
+        // 将dto映射为实体类
         Dto dto = new Dto();
         dto.setName("testName");
         dto.setAge("11");
