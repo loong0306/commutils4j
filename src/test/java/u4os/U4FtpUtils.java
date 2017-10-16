@@ -1,6 +1,6 @@
 package u4os;
 
-import com.git.comm.utils.u4list.FtpUtils;
+import com.git.comm.utils.u4os.FtpUtils;
 import org.junit.Test;
 
 /**

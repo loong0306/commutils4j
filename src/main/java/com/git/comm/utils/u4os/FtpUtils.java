@@ -1,4 +1,4 @@
-package com.git.comm.utils.u4list;
+package com.git.comm.utils.u4os;
 
 import org.apache.commons.vfs2.*;
 import org.apache.commons.vfs2.provider.ftp.FtpFileSystemConfigBuilder;
