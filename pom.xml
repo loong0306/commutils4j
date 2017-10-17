@@ -26,7 +26,12 @@
             <artifactId>modelmapper</artifactId>
             <version>0.7.5</version>
         </dependency>
-
+        <!-- slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
         <!-- jackson -->
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
