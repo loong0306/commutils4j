@@ -1,4 +1,4 @@
-package com.git.comm.utils.u4filezip;
+package com.git.comm.utils.u4file;
 
 import org.apache.tools.ant.Project;
 import org.apache.tools.ant.taskdefs.Zip;
