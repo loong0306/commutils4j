@@ -1,18 +1,12 @@
 package com.git.comm.utils.u4reqres;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
-
 import javax.servlet.http.HttpServletRequest;
 
 /**
  * 获取请求参数
  */
 public class RequestUtils {
-    public static HttpServletRequest getRequest() {
-        return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-    }
 
     /**
      * 获得用户远程地址
