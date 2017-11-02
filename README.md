@@ -28,7 +28,7 @@
         * ListUtils -> List工具类
     * u4os
         * LinuxSystemTool -> 系统工具类
-    * u4servlet
+    * u4reqres
         * CookieUtils -> Cookie工具类
         * IpUtils -> Ip工具类
     * u4string
