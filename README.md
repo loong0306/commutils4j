@@ -36,4 +36,4 @@
         * StringUtils -> String工具类
 
 ### LICENSE
-commutils4j belongs to MIT license (LICENSE-MIT or http://opensource.org/licenses/MIT)
+commutils4j belongs to MIT license (http://opensource.org/licenses/MIT)
