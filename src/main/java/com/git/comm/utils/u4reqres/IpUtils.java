@@ -1,6 +1,8 @@
 package com.git.comm.utils.u4reqres;
 
 
+import org.apache.commons.lang3.StringUtils;
+
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -20,6 +22,29 @@ public final class IpUtils {
             ip = request.getRemoteAddr();
         }
         return ip.equals("0:0:0:0:0:0:0:1")?"127.0.0.1":ip;
+    }
+
+    /**
+     * 获得用户远程地址
+     */
+    public static String getRemoteAddr(HttpServletRequest request){
+        String remoteAddr = request.getHeader("X-Real-IP");
+        if (StringUtils.isNotBlank(remoteAddr)) {
+            remoteAddr = request.getHeader("X-Forwarded-For");
+        }else if (StringUtils.isNotBlank(remoteAddr)) {
+            remoteAddr = request.getHeader("Proxy-Client-IP");
+        }else if (StringUtils.isNotBlank(remoteAddr)) {
+            remoteAddr = request.getHeader("WL-Proxy-Client-IP");
+        }
+        if(StringUtils.isEmpty(remoteAddr)){
+            remoteAddr = request.getRemoteAddr();
+            if(StringUtils.isNotEmpty(remoteAddr) && "0:0:0:0:0:0:0:1".equals(remoteAddr)){
+                remoteAddr = "127.0.0.1";
+            }else {
+                remoteAddr = request.getRemoteAddr();
+            }
+        }
+        return remoteAddr;
     }
 
 }
