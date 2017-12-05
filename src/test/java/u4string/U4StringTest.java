@@ -1,5 +1,6 @@
 package u4string;
 
+import com.git.comm.utils.u4string.NumberUtil;
 import com.git.comm.utils.u4string.StringUtils;
 import org.junit.Test;
 
@@ -27,5 +28,7 @@ public class U4StringTest {
         System.out.println(StringUtils.getHrefInnerHtml("http://github.com"));
         // trimString
         System.out.println(StringUtils.trimString("This is a test string.", 12));
+        // NumberUtil-getChinaNumber
+        System.out.println(NumberUtil.getChinaNumber(98));
     }
 }
