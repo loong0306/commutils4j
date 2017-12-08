@@ -1,0 +1,30 @@
+package u4thread;
+
+import com.git.comm.utils.u4thread.ThreadLocalMap;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+/**
+ * Created by dragon on 12/8/2017.
+ */
+public class U4ThreadTest {
+
+    @BeforeClass
+    public static void beforeClass() {
+        ThreadLocalMap.put("BeforeClass", "This is BeforeClass");
+        System.out.println(ThreadLocalMap.get("BeforeClass"));
+    }
+
+    @Test
+    public void test() {
+        ThreadLocalMap.put("Test", "This is Test");
+        System.out.println(ThreadLocalMap.get("Test"));
+    }
+
+    @AfterClass
+    public static void afterClass() {
+        ThreadLocalMap.put("AfterClass", "This is AfterClass");
+        System.out.println(ThreadLocalMap.get("AfterClass"));
+    }
+}
