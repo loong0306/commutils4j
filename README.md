@@ -11,8 +11,8 @@
         * FtpUtils -> Ftp工具类
         * PropertiesCacheUtils -> 配置缓存工具类
     * u4db
-        * RedisOperationUtils -> Redis工具类
-        * RedisUtils -> Redis业务序列号
+      * RedisOperationUtils -> Redis工具类
+      * RedisUtils -> Redis业务序列号
     * u4datetime
         * DatetimeUtils -> 时间类型工具类
     * u4double
@@ -22,7 +22,7 @@
     * u4entity
         * EntityUtils -> 实体类工具类
     * u4enum
-        * BusinessEnum -> 枚举类
+      * BusinessEnum -> 枚举类
     * u4file
         * FileZipUtils -> 压缩文件工具类
     * u4integer
@@ -42,7 +42,7 @@
         * ChinaUpperCaseUtil -> 中文工具类
         * StringUtils -> String工具类
     * u4thread
-        * ThreadLocalMap -> 线程自身携带参数
+      * ThreadLocalMap -> 线程自身携带参数
 
 ### LICENSE
 commutils4j belongs to MIT license (http://opensource.org/licenses/MIT)
