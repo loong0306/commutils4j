@@ -12,7 +12,7 @@
         * PropertiesCacheUtils -> 配置缓存工具类
     * u4db
         * RedisOperationUtils -> Redis工具类
-        * RedisUtils -> Redis业务序列号
+        * RedisUtils -> Redis业务序列号
     * u4datetime
         * DatetimeUtils -> 时间类型工具类
     * u4double
