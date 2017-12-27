@@ -42,7 +42,7 @@
         * ChinaUpperCaseUtil -> 中文工具类
         * StringUtils -> String工具类
     * u4thread
-        * ThreadLocalMap -> 线程自身携带参数
+        * ThreadLocalMap -> 线程自身携带参数
 
 ### LICENSE
 commutils4j belongs to MIT license (http://opensource.org/licenses/MIT)
