@@ -5,6 +5,34 @@ import java.util.*;
 public class ListUtils {
 
     /**
+     * 判断对象数组是否为空并且数量大于0
+     *
+     * @param value
+     * @return
+     */
+    public static Boolean isNotNullAndNotEmpty(Object[] value) {
+        boolean bl = false;
+        if (null != value && 0 < value.length) {
+            bl = true;
+        }
+        return bl;
+    }
+
+    /**
+     * 判断对象集合（List,Set）是否为空并且数量大于0
+     *
+     * @param value
+     * @return
+     */
+    public static Boolean isNotNullAndNotEmpty(Collection<?> value) {
+        boolean bl = false;
+        if (null != value && 0 < value.size()) {
+            bl = true;
+        }
+        return bl;
+    }
+
+    /**
      * 判断集合是否为空
      * @param coll
      * @return

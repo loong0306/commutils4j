@@ -1,13 +1,61 @@
 package com.git.comm.utils.u4string;
 
+import com.git.comm.utils.u4list.ListUtils;
 import com.sun.deploy.net.URLEncoder;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Collection;
 import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class StringUtils {
+
+    /**
+     * 判断一个或多个对象是否为空
+     *
+     * @param values
+     *          可变参数，要判断的一个或多个对象
+     * @return 只有要判断的一个对象都为空则返回true,否则返回false
+     */
+    public static boolean isNull(Object... values) {
+        if (!ListUtils.isNotNullAndNotEmpty(values)) {
+            return true;
+        }
+        for (Object value : values) {
+            boolean flag = false;
+            if (value instanceof Object[]) {
+                flag = !ListUtils.isNotNullAndNotEmpty((Object[]) value);
+            } else if (value instanceof Collection<?>) {
+                flag = !ListUtils.isNotNullAndNotEmpty((Collection<?>) value);
+            } else if (value instanceof String) {
+                flag = isOEmptyOrNull(value);
+            } else {
+                flag = (null == value);
+            }
+            if (flag) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isOEmptyOrNull(Object o) {
+        return o == null ? true : isSEmptyOrNull(o.toString());
+    }
+
+    public static boolean isSEmptyOrNull(String s) {
+        return trimAndNullAsEmpty(s).length() <= 0 ? true : false;
+    }
+
+    public static String trimAndNullAsEmpty(String s) {
+        if (s != null && !s.trim().equals("-")) {
+            return s.trim();
+        } else {
+            return "";
+        }
+    }
+
 
     /**
      * 判断字符串是否为空
