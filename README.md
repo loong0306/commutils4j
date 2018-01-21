@@ -25,6 +25,8 @@
         * BusinessEnum -> 枚举类
     * u4file
         * FileZipUtils -> 压缩文件工具类
+    * u4img
+        * ImageUtils ->图片处理工具类
     * u4integer
         * IntegerUtils -> Integer工具类
     * u4json
