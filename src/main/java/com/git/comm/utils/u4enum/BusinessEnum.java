@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * Created by dragon on 12/6/2017.
  */
-public enum  BusinessEnum {
+public enum BusinessEnum {
 
     FIRST("FIRST", "1"),
     SECOND("SECOND", "2"),
