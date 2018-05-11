@@ -10,6 +10,7 @@
     * u4common
         * FtpUtils -> Ftp工具类
         * PropertiesCacheUtils -> 配置缓存工具类
+        * DingDingMessageUtil -> 钉钉消息工具类
     * u4db
         * RedisOperationUtils -> Redis工具类
         * RedisUtils -> Redis业务序列号
