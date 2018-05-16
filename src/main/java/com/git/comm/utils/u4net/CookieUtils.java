@@ -1,4 +1,4 @@
-package com.git.comm.utils.u4reqres;
+package com.git.comm.utils.u4net;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

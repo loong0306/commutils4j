@@ -1,4 +1,4 @@
-package com.git.comm.utils.u4reqres;
+package com.git.comm.utils.u4net;
 
 
 import org.apache.commons.lang3.StringUtils;

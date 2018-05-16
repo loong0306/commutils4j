@@ -39,9 +39,10 @@
         * ObjectUtils -> Object工具类
     * u4os
         * LinuxSystemTool -> 系统工具类
-    * u4reqres
+    * u4net
         * CookieUtils -> Cookie工具类
         * IpUtils -> Ip工具类
+        * HttpClientUtil -> Http连接工具类
     * u4string
         * ChinaUpperCaseUtil -> 中文工具类
         * StringUtils -> String工具类
