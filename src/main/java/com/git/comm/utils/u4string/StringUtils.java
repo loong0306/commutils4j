@@ -1,9 +1,9 @@
 package com.git.comm.utils.u4string;
 
 import com.git.comm.utils.u4list.ListUtils;
-import com.sun.deploy.net.URLEncoder;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.Collection;
 import java.util.UUID;
 import java.util.regex.Matcher;
