@@ -18,6 +18,8 @@
         * DatetimeUtils -> 时间类型工具类
     * u4double
         * DoubleUtils -> Double工具类
+    * u4decimal
+        * BigDemicalUtils -> BigDemical工具类
     * u4encrypt
         * MD5Utils -> 加密工具类
     * u4entity
