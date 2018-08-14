@@ -41,6 +41,7 @@
         * ObjectUtils -> Object工具类
     * u4os
         * LinuxSystemTool -> 系统工具类
+        * BareBonesBrowserLaunch -> 打开浏览器
     * u4net
         * CookieUtils -> Cookie工具类
         * IpUtils -> Ip工具类
