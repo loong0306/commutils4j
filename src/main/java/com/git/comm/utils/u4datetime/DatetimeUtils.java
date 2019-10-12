@@ -5,6 +5,7 @@ import com.git.comm.utils.u4string.StringUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DatetimeUtils {
@@ -14,43 +15,47 @@ public class DatetimeUtils {
 
     /**
      * 获取当前精确时间 yyyy-MM-dd HH:mm:ss
+     *
      * @return
      */
-    public static String getNowTimeYMDHMS(){
+    public static String getNowTimeYMDHMS() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         return sdf.format(new Date());
     }
 
     /**
      * 获取当前日期 yyyy-MM-dd
+     *
      * @return
      */
-    public static String getNowTimeYMD(){
+    public static String getNowTimeYMD() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         return sdf.format(new Date());
     }
 
     /**
      * 获取当前日期 HH:mm:ss
+     *
      * @return
      */
-    public static String getNowTimeHMS(){
+    public static String getNowTimeHMS() {
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
         return sdf.format(new Date());
     }
 
     /**
      * 形如yyyy-MM-dd HH:mm:ss补足转换成yyyMMddHHmmssSS
+     *
      * @param dateString
      * @return
      */
-    public static String stringDataPattern(String dateString){
+    public static String stringDataPattern(String dateString) {
         String result = dateString;
         try {
-            if(StringUtils.isEmpty(result)){
+            if (StringUtils.isEmpty(result)) {
                 return result;
             }
-            if(result.length() < 17){
+            if (result.length() < 17) {
                 result += ":00";
             }
             SimpleDateFormat sdf1 = new SimpleDateFormat(datePatternFirst);
@@ -66,10 +71,11 @@ public class DatetimeUtils {
 
     /**
      * 形如yyyyMMddHHmmssSS转换成yyyy-MM-dd HH:mm:ss
+     *
      * @param dateString
      * @return
      */
-    public static String stringDataPatternSecond(String dateString){
+    public static String stringDataPatternSecond(String dateString) {
         String result = dateString;
         try {
             SimpleDateFormat sdf1 = new SimpleDateFormat(datePatternFirst);
@@ -86,6 +92,7 @@ public class DatetimeUtils {
 
     /**
      * 计算剩余时间
+     *
      * @param "类型yyyyMMddHHmmss"
      */
     public static String dateCount(String start, String end) {
@@ -108,9 +115,10 @@ public class DatetimeUtils {
 
     /**
      * 时间转换中文
+     *
      * @param dateStr
      */
-    public static String getChinaDateSec(String dateStr){
+    public static String getChinaDateSec(String dateStr) {
         String ret = "";
         try {
             ret += dateStr.substring(0, 4) + "年";
@@ -123,5 +131,44 @@ public class DatetimeUtils {
             e.printStackTrace();
         }
         return ret;
+    }
+
+    /**
+     * <p>Title: isEffectiveDate. </p>
+     * <p>Description: 判断开始时间和结束时间是否在规定时间内 </p>
+     *
+     * @param regulation 规定时间
+     * @param startTime 开始时间
+     * @param endTime 结束时间
+     * @return java.lang.Boolean
+     * @author dragon
+     * @date 2019-10-12 17:30
+     */
+    public static boolean isEffectiveDate(Date regulation, Date startTime, Date endTime) {
+        // 如果结束时间为空，返回false
+        if (null == startTime || null == endTime) {
+            return false;
+        }
+
+        long regulationTime = regulation.getTime();
+        if (regulationTime == startTime.getTime() || regulationTime == endTime.getTime()) {
+            return true;
+        }
+
+        // 当前时间
+        Calendar date = Calendar.getInstance();
+        date.setTime(regulation);
+        // 开始时间
+        Calendar start = Calendar.getInstance();
+        start.setTime(startTime);
+        // 结束时间
+        Calendar end = Calendar.getInstance();
+        end.setTime(endTime);
+
+        if (date.after(start) && date.before(end)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
